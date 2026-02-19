@@ -13,47 +13,60 @@
     <header>
         <h1>About GitHub</h1>
         <nav>
-            <ul>    
-          <li>    <a href="index.html">Home</a></li>
-          <li>   <a href="about.html">About GitHub</a></li>
-          <li>   <a href="pages.html">GitHub Pages</a></li>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About GitHub</a></li>
+                <li><a href="pages.html">GitHub Pages</a></li>
             </ul>
         </nav>
     </header>
-<hr>
- <main>
-    <article>
-        <header>
-            <h2>What GitHub Does</h2>
-            <h3>Version Control in Practice</h3>
-        </header>
-<hr>
-        <section>
+
+    <hr>
+
+    <main>
+        <article>
             <header>
-                <h2>Repositories</h2>
-                <aside>A repo stores code, files, and a timeline of changes.</aside>
-                <h3>Why Repos Matter</h3>
+                <h2>What GitHub Does</h2>
+                <h3>Version Control in Practice</h3>
             </header>
-            <ul> 
-          <li> <p>Repositories keep a project organized in one place, including folders and files.</p></li>
-            <li> <p>They also store history, so you can see what changed and when it changed.</p></li>
-            <li> <p>This is useful for collaboration because multiple contributors can work safely.</p></li>
-            </ul>
-        </section>
-<hr>
-        <section>
-            <header>
-                <h2>Commits</h2>
-                <h3>Saving Progress</h3>
-            </header>
-            <ul> 
-          <li> <p>A commit is a saved checkpoint that records what changed and includes a message.</p></li>
-               <li> <p>Good commit messages make it easier to understand the project history later.</p></li>
-                <li> <p>When a bug appears, commits help you find where the issue started.</p></li>
-                </ul>
-        </section>
-    </article>
-</main>
+
+            <p>GitHub is a web-based platform built on top of Git, a version control system created by Linus Torvalds in 2005. While Git runs locally on your computer and tracks changes to files, GitHub provides a remote location to store those changes online. This means your work is backed up, shareable, and accessible from any device. GitHub has become the most widely used platform of its kind, with millions of developers and organizations hosting their projects there.</p>
+
+            <p>At its core, GitHub is a collaboration tool. It allows teams of any size to work on the same codebase without overwriting each other's contributions. Through a system of branches and pull requests, developers can propose changes, have them reviewed by teammates, and merge them into the main project only when they are ready. This workflow is used by small student projects and large professional software teams alike.</p>
+
+            <hr>
+
+            <section>
+                <header>
+                    <h2>Repositories</h2>
+                    <aside>A repo stores code, files, and a timeline of changes.</aside>
+                    <h3>Why Repos Matter</h3>
+                </header>
+
+                <p>A repository is the central storage unit on GitHub. It holds everything related to a project: source code, documentation, images, configuration files, and a full record of every change ever committed. When you create a new repository, you are essentially creating a project folder that GitHub will track and version over time.</p>
+
+                <p>Repositories keep a project organized in one place, including all folders and files. They also store history, so you can see what changed and when it changed. Each repository has a branch structure, with the main branch typically representing the stable, working version of the project. Other branches can be created to develop new features or fix bugs without disturbing the main codebase.</p>
+
+                <p>This organizational structure is especially useful for collaboration. Multiple contributors can work on different branches at the same time, and GitHub provides tools for comparing differences and resolving conflicts when those branches are eventually merged. Even for solo developers, this structure encourages disciplined, organized work habits that become more valuable as projects grow in size and complexity.</p>
+            </section>
+
+            <hr>
+
+            <section>
+                <header>
+                    <h2>Commits</h2>
+                    <h3>Saving Progress Over Time</h3>
+                </header>
+
+                <p>A commit is a saved checkpoint that records what changed in your files and includes a short message describing the update. Every time you commit, Git takes a snapshot of the current state of your project and stores it permanently in the repository history. This creates a detailed log that you can scroll through at any time to understand how a project evolved from its earliest version to its current state.</p>
+
+                <p>Good commit messages are an important habit to develop early. A message like "add navigation bar to header" tells a reader exactly what happened in that commit, while a message like "stuff" or "update" provides no useful information. When a bug appears weeks later, a clear commit history makes it much easier to identify where the problem was introduced and what change caused it.</p>
+
+                <p>Commits also give developers confidence to experiment. Knowing that every previous version is safely stored means you can try new ideas without fear of permanently breaking something. If an experiment does not work out, you can simply revert to an earlier commit and start fresh. This freedom to experiment is one of the reasons version control is considered a fundamental skill in professional software development.</p>
+            </section>
+        </article>
+    </main>
+
     <footer>
         <address>Web Development, 2026</address>
     </footer>
