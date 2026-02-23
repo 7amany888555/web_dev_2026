@@ -1,0 +1,54 @@
+/* Page background - body */
+body {
+    background-color: #f3f4f6;
+    color: #1f2933;
+    font-size: 1rem;
+}
+
+/* Page header  */
+header {
+    background-color: #deddeb;
+    color: #ffffff;
+}
+
+/* Page title - h1 */
+h1 {
+    color: #ffffff;
+    background-color: #1f2933;
+    font-size: 3rem;
+}
+
+/* Page subtitle - h2 */
+h2 {
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+/* Page section title - h3 */
+h3 {
+    background-color: #000000;
+    color: #eef205;
+    font-size: 1.5rem;
+}
+
+nav {
+    background-color: #5a47d6;  
+}
+
+/* Page navigation links  */
+nav a {
+    color: #eef205; 
+}
+
+/* Page aside  */
+aside {
+    background-color: #84d3d9;
+    color: #1f2933;
+}
+
+/*  footer */
+footer {
+    background-color: #1f2933;
+    color: #ffffff;
+}
