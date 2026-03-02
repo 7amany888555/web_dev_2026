@@ -3,12 +3,16 @@ body {
     background-color: #f3f4f6;
     color: #1f2933;
     font-size: 1rem;
+    margin: 0;
+    padding: 0;
 }
 
 /* Page header  */
 header {
     background-color: #deddeb;
     color: #ffffff;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 /* Page title - h1 */
@@ -16,6 +20,8 @@ h1 {
     color: #ffffff;
     background-color: #1f2933;
     font-size: 3rem;
+    padding: 1rem 2rem;
+    margin: 0;
 }
 
 /* Page subtitle - h2 */
@@ -23,6 +29,8 @@ h2 {
     background-color: #000000;
     color: #ffffff;
     font-size: 2rem;
+    padding: 0.75rem 1.5rem;
+    margin: 1.5rem 0;
 }
 
 /* Page section title - h3 */
@@ -30,25 +38,95 @@ h3 {
     background-color: #000000;
     color: #eef205;
     font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
 }
 
 nav {
     background-color: #5a47d6;  
+    padding: 1rem;
 }
 
 /* Page navigation links  */
 nav a {
     color: #eef205; 
+    padding: 0.5rem 1rem;
+}
+/* Main content container - centered with margin auto */
+main {
+    background-color: #ffffff;
+    width: 85%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 2px solid #ddd;
+}
+
+/* Sections within main */
+section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border-left: 4px solid #5a47d6;
+}
+
+/* Paragraphs */
+p {
+    margin: 1rem 0;
+    padding: 0.75rem;
+    line-height: 1.6;
 }
 
 /* Page aside  */
 aside {
     background-color: #84d3d9;
     color: #1f2933;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
 }
 
 /*  footer */
 footer {
     background-color: #1f2933;
     color: #ffffff;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.parent-box {
+    width: 400px;
+    max-width: 100%;
+    border: 3px solid #000;
+    padding: 1rem;
+    background-color: #f5f5f5;
+    margin: 1.5rem 0;
+}
+
+/* Child with default content-box (overflows) */
+.child-default {
+    width: 100%;
+    padding: 1rem;
+    background-color: #c5d9f1;
+    border: 2px dashed #4472c4;
+    box-sizing: content-box;
+}
+
+.child-default p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Child with border-box (fits perfectly) */
+.child-borderbox {
+    width: 100%;
+    padding: 1rem;
+    background-color: #d4e8d4;
+    border: 2px solid #548235;
+    box-sizing: border-box;
+}
+
+.child-borderbox p {
+    margin: 0;
+    font-size: 0.9rem;
 }
