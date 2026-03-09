@@ -1,3 +1,8 @@
+/* Base font size   */
+html {
+    font-size: 100%;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
 /* Page background - body */
 body {
     background-color: #f3f4f6;
@@ -5,6 +10,7 @@ body {
     font-size: 1rem;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
 /* Page header  */
@@ -15,6 +21,15 @@ header {
     margin-bottom: 2rem;
 }
 
+/*HEADINGS - Hierarchy with Serif Font */
+
+h1, h2, h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+
 /* Page title - h1 */
 h1 {
     color: #ffffff;
@@ -22,6 +37,8 @@ h1 {
     font-size: 3rem;
     padding: 1rem 2rem;
     margin: 0;
+    text-align: center;
+    letter-spacing: 0.02em;
 }
 
 /* Page subtitle - h2 */
@@ -31,6 +48,7 @@ h2 {
     font-size: 2rem;
     padding: 0.75rem 1.5rem;
     margin: 1.5rem 0;
+    text-transform: capitalize;
 }
 
 /* Page section title - h3 */
@@ -40,6 +58,7 @@ h3 {
     font-size: 1.5rem;
     padding: 0.5rem 1rem;
     margin: 1rem 0;
+    font-weight: 600;
 }
 
 nav {
@@ -51,6 +70,15 @@ nav {
 nav a {
     color: #eef205; 
     padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+}
+nav a:hover {
+    background-color: #eef205;
+    color: #1f2933;
+    border-radius: 4px;
+    text-decoration: underline;
 }
 /* Main content container - centered with margin auto */
 main {
@@ -73,7 +101,15 @@ section {
 p {
     margin: 1rem 0;
     padding: 0.75em;
-    line-height: 1.6;
+    line-height: 1.7;
+    font-size: 1rem;
+    text-align: left;
+
+}
+
+/* First paragraph indent (optional typographic style) */
+section p + p {
+    text-indent: 1.5em;
 }
 
 /* Page aside  */
@@ -83,6 +119,24 @@ aside {
     padding: 1rem;
     margin: 1rem 0;
     border-radius: 4px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+/* CODE STYLING ( */
+code, pre {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.9em;
+    background-color: #f4f4f4;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+}
+
+pre {
+    padding: 1rem;
+    overflow-x: auto;
+    line-height: 1.5;
 }
 
 /*  footer */
@@ -91,7 +145,9 @@ footer {
     color: #ffffff;
     padding: 1.5rem;
     margin-top: 3rem;
-    text-align: center;
+    text-align: left;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
 }
 
 .parent-box {
