@@ -47,54 +47,71 @@ a {
 
 /* Page subtitle - h2 */
 h2 {
-    background: linear-gradient(90deg, #1a202c 0%, #2d3748 100%);
+    background: linear-gradient(90deg, #0f172a 0%, #334155 100%);
     color: #ffffff;
     font-size: 2rem;
     padding: 0.75rem 1.5rem;
     margin: 1.5rem 0;
     text-transform: capitalize;
+    border-radius: 0.7rem;
+
 }
+
 
 /* Page section title - h3 */
 h3 {
-    background-color: #2d3748;
-    color: #eef205;
+    background-color: #dbeafe;
+    color: #0f172a;
     font-size: 1.5rem;
     padding: 0.5rem 1rem;
     margin: 1rem 0;
     font-weight: 600;
+    border-left: 5px solid #2563eb;
+    border-radius: 0.4rem;
 }
 
+/* Page navigation bar  */
 nav {
     background: linear-gradient(90deg, #5a47d6 0%, #764ba2 100%);
     padding: 1rem 2rem;
     font-size: 1.25rem;
      border-radius: 8px;
+     border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 999px;
+    backdrop-filter: blur(4px);
 }
 
+/* Navigation list - horizontal with spacing */
 nav ul {
-    list-style: square;
+    list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
     flex-wrap: wrap;
 }
 
+/* Navigation list items - no default margin, flexible layout */
 nav li {
     margin: 0;
+        flex: 0 1 auto;
+
 }
 
 /* Page navigation links  */
 nav a {
+     background: rgba(15, 23, 42, 0.18);
     color: #eef205; 
     padding: 0.5rem 1rem;
     text-decoration: none;
     font-weight: 500;
     letter-spacing: 0.03em;
-    transition: background-color 0.3s, color 0.3s;
-    
+    transition: background-color 0.3s, color 0.3s; 
 }
+
+/* Hover effect for navigation links */
 nav a:hover {
     background-color: #eef205;
     color: #1f2933;
@@ -109,13 +126,36 @@ main {
     margin: 2rem auto;
     padding: 2rem;
     border: 2px solid #ddd;
+    box-shadow: 0 18px 38px rgba(15, 23, 42, 0.08);
+
 }
 
 /* Sections within main */
 section {
-    margin: 2rem 0;
+    margin: 0;
     padding: 1.5rem;
     border-left: 4px solid #5a47d6;
+    display: flex;
+    flex: 1 1 340px;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* Section header - styled with background and border */
+section > header {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    color: inherit;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+/* First paragraph indent (optional typographic style) */
+section p + p {
+    text-indent: 1.5em;
 }
 
 /* Paragraphs */
@@ -125,13 +165,55 @@ p {
     line-height: 1.7;
     font-size: 1rem;
     text-align: left;
+   
+}
+
+/* Article layout - flexbox for responsive design */
+article {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: stretch;
 
 }
 
-/* First paragraph indent (optional typographic style) */
-section p + p {
-    text-indent: 1.5em;
+/* Article header - full width with background and border */
+article > header {
+    flex: 1 1 100%;
+    margin-bottom: 0;
+    padding: 1.5rem;
+    color: #1f2933;
+    border: 1px solid #bfdbfe;
+    border-radius: 1rem;
+    box-shadow: none;
 }
+
+/* Article header link styled as a button */
+article > header a {
+    display: inline-block;
+    margin: 1rem 0 0.9rem 0;
+    padding: 0.75rem 1rem;
+    color: #ffffff;
+    background: #2563eb;
+    border-radius: 0.65rem;
+    text-decoration: none;
+}
+
+/* Hover effect for article header link */
+article > header a:hover {
+    background: #1d4ed8;
+}
+/* Article paragraphs - flexible layout with background and border */
+article > p {
+    flex: 1 1 320px;
+    margin: 0;
+    padding: 1.25rem;
+    background: #f8fbff;
+    border: 1px solid #031e41;
+    border-radius: 1rem;
+}
+
+
 
 /* Page aside  */
 aside {
@@ -198,6 +280,8 @@ hr {
     height: 2px;
     background: linear-gradient(90deg, transparent 0%, #667eea 50%, transparent 100%);
     margin: 2rem 0;
+    flex: 1 1 100%;
+
 }
  
 
