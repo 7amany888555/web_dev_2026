@@ -185,6 +185,7 @@ article > header {
     flex: 1 1 100%;
     margin-bottom: 0;
     padding: 1.5rem;
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
     color: #1f2933;
     border: 1px solid #bfdbfe;
     border-radius: 1rem;
