@@ -153,6 +153,7 @@ section > header {
     gap: 0.8rem;
 }
 
+
 /* First paragraph indent (optional typographic style) */
 section p + p {
     text-indent: 1.5em;
@@ -165,7 +166,9 @@ p {
     line-height: 1.7;
     font-size: 1rem;
     text-align: left;
-   
+    background: #f8fbff;
+    border: 1px solid #031e41;
+    border-radius: 1rem;
 }
 
 /* Article layout - flexbox for responsive design */
@@ -186,6 +189,7 @@ article > header {
     border: 1px solid #bfdbfe;
     border-radius: 1rem;
     box-shadow: none;
+    
 }
 
 /* Article header link styled as a button */
@@ -206,13 +210,7 @@ article > header a:hover {
 /* Article paragraphs - flexible layout with background and border */
 article > p {
     flex: 1 1 320px;
-    margin: 0;
-    padding: 1.25rem;
-    background: #f8fbff;
-    border: 1px solid #031e41;
-    border-radius: 1rem;
 }
-
 
 
 /* Page aside  */
