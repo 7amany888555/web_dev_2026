@@ -253,6 +253,72 @@ pre {
     line-height: 1.5;
 }
 
+h4 {
+    color: #0f172a;
+    font-size: 1.05rem;
+    margin: 0 0 0.75rem 0;
+}
+
+.command-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.command-card {
+    background: #f8fbff;
+    border: 1px solid #bfdbfe;
+    border-left: 5px solid #2563eb;
+    border-radius: 0.7rem;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+    padding: 1rem;
+}
+
+.command-card-wide {
+    width: 100%;
+}
+
+.command-card pre {
+    background: #0f172a;
+    color: #e2e8f0;
+    border-radius: 0.5rem;
+    margin: 0.75rem 0;
+}
+
+.command-card code {
+    background: transparent;
+    color: inherit;
+    padding: 0;
+}
+
+.command-card p {
+    margin: 0.75rem 0;
+    border-color: #bfdbfe;
+    border-radius: 0.6rem;
+}
+
+.copy-button {
+    background: #2563eb;
+    border: 0;
+    border-radius: 0.5rem;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 0.65rem 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.copy-button:hover,
+.copy-button:focus {
+    background: #1d4ed8;
+    outline: 3px solid #93c5fd;
+    outline-offset: 2px;
+}
+
+.copy-button:active {
+    transform: translateY(1px);
+}
+
 /* Images */
 img {
     max-width: 80%;

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Abdulrahman Al Haideri">
+    <meta name="description" content="A beginner-friendly guide to the most important Git commands for setup, repositories, commits, branches, pushing, and pulling.">
+    <meta name="keywords" content="Git commands, git status, git add, git commit, git branch, git push, git pull, version control">
+    <title>Git Commands</title>
+    <base href="https://7amany888555.github.io/web_dev_2026/">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="/media/logoo.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Git Commands",
+  "description": "A beginner-friendly educational page that explains important Git commands for setup, repositories, status checks, staging, commits, history, branches, pushing, pulling, and a common Git workflow.",
+  "author": {
+    "@type": "Person",
+    "name": "Abdulrahman Al Haideri"
+  },
+  "keywords": [
+    "Git commands",
+    "version control",
+    "git setup",
+    "git clone",
+    "git status",
+    "git add",
+    "git commit",
+    "git log",
+    "git branch",
+    "git push",
+    "git pull"
+  ],
+  "hasPart": [
+    {
+      "@type": "WebPageElement",
+      "name": "What is Git?"
+    },
+    {
+      "@type": "WebPageElement",
+      "name": "Basic Git Setup"
+    },
+    {
+      "@type": "WebPageElement",
+      "name": "Creating and Cloning Repositories"
+    },
+    {
+      "@type": "WebPageElement",
+      "name": "Checking Status"
+    },
+    {
+      "@type": "WebPageElement",
+      "name": "Adding Files"
+    },
+    {
+      "@type": "WebPageElement",
+      "name": "Committing Changes"
+    },
+    {
+      "@type": "WebPageElement",
+      "name": "Viewing History"
+    },
+    {
+      "@type": "WebPageElement",
+      "name": "Working with Branches"
+    },
+    {
+      "@type": "WebPageElement",
+      "name": "Pushing and Pulling"
+    },
+    {
+      "@type": "WebPageElement",
+      "name": "Common Git Workflow"
+    }
+  ],
+  "mainEntity": {
+    "@type": "LearningResource",
+    "name": "Beginner Git Commands Guide",
+    "learningResourceType": "Tutorial",
+    "educationalLevel": "Beginner",
+    "about": "Practical Git commands for new developers"
+  }
+}
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Git Commands</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About GitHub</a></li>
+                <li><a href="pages.html">GitHub Pages</a></li>
+                <li><a href="git-commands.html">Git Commands</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <header>
+                <h2>Essential Git Commands for Beginners</h2>
+                <aside>Git commands help you save project history, move between versions, and share code with GitHub.</aside>
+                <h3>A Practical Command Reference</h3>
+            </header>
+
+            <p>This page introduces the Git commands beginners use most often. Each command includes an example, a short explanation, and a copy button so you can practice the command in your own project folder.</p>
+
+            <section>
+                <header>
+                    <h2>What is Git?</h2>
+                    <h3>Version Control on Your Computer</h3>
+                </header>
+
+                <p><i>Git</i> is a version control system that tracks changes in your project files. It lets you save checkpoints, compare work over time, and return to earlier versions when needed.</p>
+
+                <div class="command-card">
+                    <h4>Command: git --version</h4>
+                    <pre><code>git --version</code></pre>
+                    <p>Shows the installed Git version and confirms that Git is available on your computer.</p>
+                    <button type="button" class="copy-button" aria-label="Copy command git version">Copy</button>
+                </div>
+            </section>
+
+            <hr>
+
+            <section>
+                <header>
+                    <h2>Basic Git Setup</h2>
+                    <h3>Identify Your Commits</h3>
+                </header>
+
+                <p>Before making commits, set your name and email. Git uses this information to label the work you save in the project history.</p>
+
+                <div class="command-grid">
+                    <div class="command-card">
+                        <h4>Command: git config user.name</h4>
+                        <pre><code>git config --global user.name "Your Name"</code></pre>
+                        <p>Sets the author name that appears on your commits.</p>
+                        <button type="button" class="copy-button" aria-label="Copy command git config user name">Copy</button>
+                    </div>
+
+                    <div class="command-card">
+                        <h4>Command: git config user.email</h4>
+                        <pre><code>git config --global user.email "you@example.com"</code></pre>
+                        <p>Sets the email address connected to your commits.</p>
+                        <button type="button" class="copy-button" aria-label="Copy command git config user email">Copy</button>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <section>
+                <header>
+                    <h2>Creating and Cloning Repositories</h2>
+                    <h3>Start or Download a Project</h3>
+                </header>
+
+                <p>You can create a new Git repository in an existing folder, or clone a repository from GitHub to get a local copy on your computer.</p>
+
+                <div class="command-grid">
+                    <div class="command-card">
+                        <h4>Command: git init</h4>
+                        <pre><code>git init</code></pre>
+                        <p>Creates a new Git repository in the current folder.</p>
+                        <button type="button" class="copy-button" aria-label="Copy command git init">Copy</button>
+                    </div>
+
+                    <div class="command-card">
+                        <h4>Command: git clone</h4>
+                        <pre><code>git clone https://github.com/username/repository-name.git</code></pre>
+                        <p>Downloads a GitHub repository to your computer.</p>
+                        <button type="button" class="copy-button" aria-label="Copy command git clone">Copy</button>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <section>
+                <header>
+                    <h2>Checking Status</h2>
+                    <h3>See What Changed</h3>
+                </header>
+
+                <p>Checking status is one of the safest habits in Git. It tells you which files changed, which files are staged, and what still needs attention.</p>
+
+                <div class="command-card">
+                    <h4>Command: git status</h4>
+                    <pre><code>git status</code></pre>
+                    <p>Shows the current state of the working directory and staged files.</p>
+                    <button type="button" class="copy-button" aria-label="Copy command git status">Copy</button>
+                </div>
+            </section>
+
+            <hr>
+
+            <section>
+                <header>
+                    <h2>Adding Files</h2>
+                    <h3>Stage Work for a Commit</h3>
+                </header>
+
+                <p>Staging means choosing which changes should be included in the next commit. You can stage one file or all changed files.</p>
+
+                <div class="command-grid">
+                    <div class="command-card">
+                        <h4>Command: git add file</h4>
+                        <pre><code>git add index.html</code></pre>
+                        <p>Stages one specific file for the next commit.</p>
+                        <button type="button" class="copy-button" aria-label="Copy command git add file">Copy</button>
+                    </div>
+
+                    <div class="command-card">
+                        <h4>Command: git add all</h4>
+                        <pre><code>git add .</code></pre>
+                        <p>Stages all changed files in the current project folder.</p>
+                        <button type="button" class="copy-button" aria-label="Copy command git add all">Copy</button>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <section>
+                <header>
+                    <h2>Committing Changes</h2>
+                    <h3>Save a Checkpoint</h3>
+                </header>
+
+                <p>A commit is a saved version of your staged work. Good commit messages explain what changed in a clear and specific way.</p>
+
+                <div class="command-card">
+                    <h4>Command: git commit</h4>
+                    <pre><code>git commit -m "Add navigation links"</code></pre>
+                    <p>Saves staged changes with a short message describing the update.</p>
+                    <button type="button" class="copy-button" aria-label="Copy command git commit">Copy</button>
+                </div>
+            </section>
+
+            <hr>
+
+            <section>
+                <header>
+                    <h2>Viewing History</h2>
+                    <h3>Review Past Commits</h3>
+                </header>
+
+                <p>Git history helps you understand how a project changed over time. It is especially useful when you need to find when a change was made.</p>
+
+                <div class="command-card">
+                    <h4>Command: git log</h4>
+                    <pre><code>git log --oneline</code></pre>
+                    <p>Displays a short list of recent commits in the repository.</p>
+                    <button type="button" class="copy-button" aria-label="Copy command git log">Copy</button>
+                </div>
+            </section>
+
+            <hr>
+
+            <section>
+                <header>
+                    <h2>Working with Branches</h2>
+                    <h3>Develop Without Disturbing Main</h3>
+                </header>
+
+                <p>Branches let you work on a feature or fix separately from the main version of the project. This keeps experiments organized and safer.</p>
+
+                <div class="command-grid">
+                    <div class="command-card">
+                        <h4>Command: git branch</h4>
+                        <pre><code>git branch</code></pre>
+                        <p>Lists the branches in the current repository.</p>
+                        <button type="button" class="copy-button" aria-label="Copy command git branch">Copy</button>
+                    </div>
+
+                    <div class="command-card">
+                        <h4>Command: git checkout branch</h4>
+                        <pre><code>git checkout -b new-feature</code></pre>
+                        <p>Creates a new branch and switches to it.</p>
+                        <button type="button" class="copy-button" aria-label="Copy command git checkout branch">Copy</button>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <section>
+                <header>
+                    <h2>Pushing and Pulling</h2>
+                    <h3>Sync with GitHub</h3>
+                </header>
+
+                <p>Pushing sends your local commits to GitHub. Pulling brings the latest commits from GitHub down to your computer.</p>
+
+                <div class="command-grid">
+                    <div class="command-card">
+                        <h4>Command: git push</h4>
+                        <pre><code>git push origin main</code></pre>
+                        <p>Uploads commits from your local main branch to GitHub.</p>
+                        <button type="button" class="copy-button" aria-label="Copy command git push">Copy</button>
+                    </div>
+
+                    <div class="command-card">
+                        <h4>Command: git pull</h4>
+                        <pre><code>git pull origin main</code></pre>
+                        <p>Downloads and merges the latest changes from GitHub.</p>
+                        <button type="button" class="copy-button" aria-label="Copy command git pull">Copy</button>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <section>
+                <header>
+                    <h2>Common Git Workflow</h2>
+                    <h3>A Simple Routine</h3>
+                </header>
+
+                <p>A common beginner workflow is to check your files, stage the changes, commit them, and push the commit to GitHub. This keeps your local work and remote repository up to date.</p>
+
+                <div class="command-card command-card-wide">
+                    <h4>Command: everyday Git workflow</h4>
+                    <pre><code>git status
+git add .
+git commit -m "Describe your changes"
+git push origin main</code></pre>
+                    <p>Checks your work, stages changed files, saves a commit, and uploads it to GitHub.</p>
+                    <button type="button" class="copy-button" aria-label="Copy common Git workflow commands">Copy</button>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <address>Web Development, 2026</address>
+    </footer>
+
+    <script>
+        const copyButtons = document.querySelectorAll(".copy-button");
+
+        function copyCommand(commandText) {
+            if (navigator.clipboard && window.isSecureContext) {
+                return navigator.clipboard.writeText(commandText);
+            }
+
+            const textArea = document.createElement("textarea");
+            textArea.value = commandText;
+            textArea.setAttribute("readonly", "");
+            textArea.style.position = "absolute";
+            textArea.style.left = "-9999px";
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textArea);
+            return Promise.resolve();
+        }
+
+        copyButtons.forEach((button) => {
+            button.addEventListener("click", async () => {
+                const commandCard = button.closest(".command-card");
+                const commandText = commandCard.querySelector("code").innerText;
+
+                try {
+                    await copyCommand(commandText);
+                    button.textContent = "Copied!";
+
+                    setTimeout(() => {
+                        button.textContent = "Copy";
+                    }, 1600);
+                } catch (error) {
+                    button.textContent = "Copy failed";
+
+                    setTimeout(() => {
+                        button.textContent = "Copy";
+                    }, 1600);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
