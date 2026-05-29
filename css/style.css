@@ -154,19 +154,21 @@ article > header {
 .hero-section {
     align-items: center;
     background:
-        linear-gradient(130deg, rgba(255, 255, 255, 0.86) 0%, rgba(235, 246, 255, 0.88) 48%, rgba(255, 247, 237, 0.82) 100%);
+        linear-gradient(100deg, rgba(255, 255, 255, 0.96) 0%, rgba(248, 252, 255, 0.88) 42%, rgba(255, 255, 255, 0.44) 100%),
+        url("../media/hero.png") center right / cover no-repeat;
     display: flex;
     gap: clamp(1.8rem, 5vw, 4rem);
-    justify-content: space-between;
-    min-height: 520px;
+    justify-content: flex-start;
+    min-height: clamp(520px, 68vh, 680px);
     overflow: hidden;
 }
 
 .hero-content {
     display: flex;
-    flex: 1 1 420px;
+    flex: 0 1 620px;
     flex-direction: column;
     gap: 1rem;
+    max-width: 620px;
 }
 
 .eyebrow {
@@ -242,23 +244,6 @@ article > header a:not(.button):hover {
     background: #ffffff;
     border-color: rgba(36, 107, 143, 0.38);
     box-shadow: 0 12px 26px rgba(71, 104, 130, 0.12);
-}
-
-.hero-visual {
-    flex: 1 1 440px;
-    margin: 0;
-}
-
-.hero-visual img {
-    aspect-ratio: 16 / 10;
-    border: 1px solid rgba(255, 255, 255, 0.72);
-    border-radius: 30px;
-    box-shadow: 0 28px 70px rgba(46, 69, 93, 0.18);
-    display: block;
-    height: 100%;
-    max-width: 100%;
-    object-fit: cover;
-    width: 100%;
 }
 
 article > p,
@@ -534,8 +519,11 @@ footer address {
     }
 
     .hero-section {
+        background:
+            linear-gradient(180deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.8) 55%, rgba(255, 255, 255, 0.58) 100%),
+            url("../media/hero.png") center bottom / cover no-repeat;
         min-height: auto;
-        flex-direction: column;
+        padding-block: 3rem;
     }
 }
 
