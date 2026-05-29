@@ -45,9 +45,10 @@ body > header {
     z-index: 20;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 1.5rem;
-    padding: 0.9rem clamp(1rem, 4vw, 3rem);
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.85rem;
+    padding: 1.1rem clamp(1rem, 4vw, 3rem);
     background:
         linear-gradient(115deg, rgba(255, 255, 255, 0.88), rgba(245, 250, 255, 0.78) 48%, rgba(255, 248, 241, 0.82));
     border-bottom: 1px solid rgba(126, 154, 178, 0.2);
@@ -67,10 +68,10 @@ h4 {
 }
 
 h1 {
-    flex: 0 1 auto;
-    font-size: clamp(1.15rem, 2vw, 1.65rem);
+    font-size: clamp(1.55rem, 3vw, 2.3rem);
     margin: 0;
-    max-width: 420px;
+    max-width: 760px;
+    text-align: center;
 }
 
 h2 {
@@ -111,13 +112,13 @@ button:focus-visible {
 }
 
 nav {
-    flex: 0 0 auto;
     background:
         linear-gradient(135deg, rgba(255, 255, 255, 0.74), rgba(241, 249, 252, 0.68)),
         linear-gradient(90deg, rgba(184, 199, 255, 0.18), rgba(120, 198, 189, 0.14));
     border: 1px solid rgba(126, 154, 178, 0.22);
     border-radius: 999px;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 14px 34px rgba(54, 79, 105, 0.10);
+    max-width: 100%;
     padding: 0.28rem;
 }
 
@@ -126,7 +127,7 @@ nav ul {
     display: flex;
     flex-wrap: wrap;
     gap: 0.2rem;
-    justify-content: flex-end;
+    justify-content: center;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -142,7 +143,10 @@ nav a {
     display: inline-flex;
     font-size: 0.94rem;
     font-weight: 700;
-    padding: 0.62rem 1rem;
+    min-width: 118px;
+    padding: 0.62rem 1.05rem;
+    text-align: center;
+    justify-content: center;
     text-decoration: none;
     transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -544,13 +548,11 @@ footer address {
 
 @media (max-width: 860px) {
     body > header {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 0.85rem;
+        align-items: center;
     }
 
     nav ul {
-        justify-content: flex-start;
+        justify-content: center;
     }
 
     .hero-section {
@@ -569,6 +571,7 @@ footer address {
 
     nav a {
         font-size: 0.88rem;
+        min-width: auto;
         padding: 0.5rem 0.72rem;
     }
 
