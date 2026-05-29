@@ -13,11 +13,11 @@
     --lavender: #b8c7ff;
     --peach: #ffd9bf;
     --cream: #fffaf3;
-    --surface: rgba(255, 255, 255, 0.78);
-    --surface-strong: rgba(255, 255, 255, 0.92);
-    --line: rgba(126, 154, 178, 0.24);
-    --shadow-soft: 0 18px 48px rgba(48, 70, 92, 0.10);
-    --shadow-lift: 0 24px 60px rgba(48, 70, 92, 0.14);
+    --surface: rgba(255, 255, 255, 0.46);
+    --surface-strong: rgba(255, 255, 255, 0.58);
+    --line: rgba(126, 154, 178, 0.2);
+    --shadow-soft: 0 18px 48px rgba(48, 70, 92, 0.08);
+    --shadow-lift: 0 24px 60px rgba(48, 70, 92, 0.11);
 }
 
 html {
@@ -175,13 +175,15 @@ article {
 
 article > header {
     background:
-        linear-gradient(145deg, rgba(255, 255, 255, 0.88), rgba(246, 251, 255, 0.78) 56%, rgba(255, 250, 245, 0.8));
+        linear-gradient(145deg, rgba(255, 255, 255, 0.58), rgba(246, 251, 255, 0.42) 56%, rgba(255, 250, 245, 0.38));
     border: 1px solid var(--line);
     border-radius: 28px;
     box-shadow: var(--shadow-soft);
     color: var(--ink);
     flex: 1 1 100%;
     padding: clamp(1.4rem, 4vw, 3rem);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .hero-section {
@@ -284,10 +286,12 @@ article > header a:not(.button):hover {
 article > p,
 section {
     background:
-        linear-gradient(145deg, rgba(255, 255, 255, 0.88), rgba(248, 252, 253, 0.78));
+        linear-gradient(145deg, rgba(255, 255, 255, 0.5), rgba(248, 252, 253, 0.34));
     border: 1px solid var(--line);
     border-radius: 24px;
     box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 article > p {
@@ -338,7 +342,7 @@ section p + p {
 }
 
 aside {
-    background: linear-gradient(135deg, rgba(224, 243, 246, 0.82), rgba(244, 241, 255, 0.76));
+    background: linear-gradient(135deg, rgba(224, 243, 246, 0.5), rgba(244, 241, 255, 0.42));
     border: 1px solid rgba(76, 142, 157, 0.18);
     border-radius: 16px;
     color: #264d5a;
@@ -374,7 +378,7 @@ code {
 }
 
 pre {
-    background: linear-gradient(135deg, #f5fbfc, #f8f9ff);
+    background: linear-gradient(135deg, rgba(245, 251, 252, 0.64), rgba(248, 249, 255, 0.56));
     border: 1px solid rgba(161, 185, 202, 0.44);
     color: #1f3b52;
     line-height: 1.55;
@@ -391,7 +395,7 @@ pre {
 
 .command-card {
     background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(248, 252, 253, 0.9)),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.46), rgba(248, 252, 253, 0.34)),
         linear-gradient(135deg, rgba(120, 198, 189, 0.08), rgba(184, 199, 255, 0.08));
     border: 1px solid rgba(126, 154, 178, 0.28);
     border-radius: 20px;
@@ -401,6 +405,8 @@ pre {
     flex-direction: column;
     gap: 0.85rem;
     padding: 1rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .command-card-wide {
@@ -408,7 +414,7 @@ pre {
 }
 
 .command-card pre {
-    background: linear-gradient(135deg, #f6fbfc, #f8f7ff);
+    background: linear-gradient(135deg, rgba(246, 251, 252, 0.62), rgba(248, 247, 255, 0.54));
     border-left: 4px solid var(--mint);
     box-shadow: inset 0 1px 8px rgba(51, 65, 85, 0.03);
 }
