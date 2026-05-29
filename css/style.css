@@ -190,7 +190,7 @@ article > header {
         linear-gradient(100deg, rgba(255, 255, 255, 0.97) 0%, rgba(242, 250, 255, 0.9) 39%, rgba(255, 248, 241, 0.58) 66%, rgba(255, 255, 255, 0.36) 100%),
         radial-gradient(circle at 16% 18%, rgba(184, 199, 255, 0.28), transparent 24rem),
         radial-gradient(circle at 74% 22%, rgba(120, 198, 189, 0.2), transparent 22rem),
-        url("../media/hero.png") center right / cover no-repeat;
+        url("../media/site-background.png") center right / cover no-repeat;
     display: flex;
     gap: clamp(1.8rem, 5vw, 4rem);
     justify-content: flex-start;
@@ -558,7 +558,7 @@ footer address {
     .hero-section {
         background:
             linear-gradient(180deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.8) 55%, rgba(255, 255, 255, 0.58) 100%),
-            url("../media/hero.png") center bottom / cover no-repeat;
+            url("../media/site-background.png") center bottom / cover no-repeat;
         min-height: auto;
         padding-block: 3rem;
     }
