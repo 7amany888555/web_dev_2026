@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Abdulrahman Al Haideri">
+    <meta name="description" content="A beginner-friendly guide to team-based development with Git and GitHub: branches, pulling changes, pull requests, code review, and merge conflicts.">
+    <meta name="keywords" content="Git team workflow, pull request, git pull, git fetch, git merge, git rebase, merge conflicts, code review, feature branch">
+    <title>Team Workflow</title>
+    <base href="https://7amany888555.github.io/web_dev_2026/">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="/media/logoo.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Team Workflow",
+  "description": "A beginner-friendly educational page that explains how developers collaborate with Git and GitHub using feature branches, pull requests, code review, and conflict resolution.",
+  "author": {
+    "@type": "Person",
+    "name": "Abdulrahman Al Haideri"
+  },
+  "keywords": [
+    "team workflow",
+    "feature branch",
+    "pull request",
+    "git pull",
+    "git fetch",
+    "git merge",
+    "git rebase",
+    "git stash",
+    "merge conflicts",
+    "code review"
+  ],
+  "hasPart": [
+    { "@type": "WebPageElement", "name": "Why Teams Need a Workflow" },
+    { "@type": "WebPageElement", "name": "The Feature Branch Workflow" },
+    { "@type": "WebPageElement", "name": "Key Commands for Teams" },
+    { "@type": "WebPageElement", "name": "Pull Requests" },
+    { "@type": "WebPageElement", "name": "Merge Conflicts" },
+    { "@type": "WebPageElement", "name": "Team Best Practices" },
+    { "@type": "WebPageElement", "name": "Quick Reference" }
+  ],
+  "mainEntity": {
+    "@type": "LearningResource",
+    "name": "Beginner Guide to Team Development with Git",
+    "learningResourceType": "Tutorial",
+    "educationalLevel": "Beginner",
+    "about": "Collaborating on one repository with Git and GitHub"
+  }
+}
+    </script>
+</head>
+<body class="command-page">
+    <header>
+        <h1>Team Workflow</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About GitHub</a></li>
+                <li><a href="pages.html">GitHub Pages</a></li>
+                <li><a href="git-commands.html">Git Commands</a></li>
+                <li><a href="team-workflow.html" aria-current="page">Team Workflow</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <header>
+                <h2>Working Together with Git and GitHub</h2>
+                <aside>A shared workflow lets many developers change the same project without overwriting each other's work.</aside>
+                <h3>From Your Branch to the Main Project</h3>
+            </header>
+
+            <p>When you work alone, you can commit straight to <code>main</code>. On a team, everyone shares one <i>repository</i> (the project folder and its history), so you need a few extra habits: working on separate branches, keeping your copy up to date, and asking teammates to review your changes before they are added. This page walks through that process step by step.</p>
+
+            <section>
+                <header>
+                    <h2>Why Teams Need a Workflow</h2>
+                    <h3>Fewer Collisions, Better Code</h3>
+                </header>
+
+                <p>Without agreed rules, two people can edit the same file at once, someone can break the version everyone depends on, and nobody checks new code before it ships. A team workflow solves three problems:</p>
+
+                <ul class="plain-list">
+                    <li><strong>Fewer conflicts.</strong> Each person works on their own <i>branch</i>, a separate line of development, so unfinished work never collides with someone else's.</li>
+                    <li><strong>Code review.</strong> Changes go through a <i>pull request</i>, where teammates read the code and suggest improvements before it is merged.</li>
+                    <li><strong>A stable main branch.</strong> <code>main</code> always holds working code that anyone can build on or deploy.</li>
+                </ul>
+            </section>
+
+            <hr>
+
+            <section>
+                <header>
+                    <h2>The Feature Branch Workflow</h2>
+                    <h3>Eight Steps Every Change Follows</h3>
+                </header>
+
+                <p>Most teams on GitHub use this cycle for every feature or fix, no matter how small.</p>
+
+                <ol class="workflow-steps">
+                    <li><strong>Clone</strong> the repository once to get a local copy.</li>
+                    <li><strong>Create a branch</strong> from an up-to-date <code>main</code> for your task.</li>
+                    <li><strong>Commit</strong> your work in small, clear steps.</li>
+                    <li><strong>Push</strong> the branch to GitHub so others can see it.</li>
+                    <li><strong>Open a pull request</strong> asking to merge your branch into <code>main</code>.</li>
+                    <li><strong>Review</strong>: teammates comment and you push fixes to the same branch.</li>
+                    <li><strong>Merge</strong> the pull request once it is approved.</li>
+                    <li><strong>Delete the branch</strong> and pull the updated <code>main</code>.</li>
+                </ol>
+            </section>
+
+            <hr>
+
+            <section>
+                <header>
+                    <h2>Key Commands for Teams</h2>
+                    <h3>Getting and Updating the Project</h3>
+                </header>
+
+                <p>A <i>remote</i> is the copy of the repository on GitHub, usually named <code>origin</code>. These commands keep your local copy in sync with it.</p>
+
+                <div class="command-grid">
+                    <div class="command-card">
+                        <h4>Command: git clone</h4>
+                        <pre><code>git clone https://github.com/team/project.git</code></pre>
+                        <p>Downloads the full repository and its history. Use it once, when you join a project.</p>
+                        <button type="button" class="copy-button" aria-label="Copy command git clone">Copy</button>
+                    </div>
+
+                    <div class="command-card">
+                        <h4>Command: git pull</h4>
+                        <pre><code>git pull origin main</code></pre>
+                        <p>Downloads new commits from GitHub and merges them into your current branch. Run it before you start working each day.</p>
+                        <button type="button" class="copy-button" aria-label="Copy command git pull">Copy</button>
+                    </div>
+
+                    <div class="command-card">
+                        <h4>Command: git fetch</h4>
+                        <pre><code>git fetch origin</code></pre>
+                        <p>Downloads new commits and branches but does not change your files. Use it to see what teammates did before you merge anything.</p>
+                        <button type="button" class="copy-button" aria-label="Copy command git fetch">Copy</button>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <section>
+                <header>
+                    <h2>Branching and Sharing</h2>
+                    <h3>Your Own Space to Work</h3>
+                </header>
+
+                <p>Create a new branch for every task, then push it to GitHub so your team can review it.</p>
+
+                <div class="command-grid">
+                    <div class="command-card">
+                        <h4>Command: git switch -c</h4>
+                        <pre><code>git switch -c feature/login-form</code></pre>
+                        <p>Creates a new branch and moves you onto it. <code>git checkout -b</code> does the same thing in older Git versions.</p>
+                        <button type="button" class="copy-button" aria-label="Copy command git switch create branch">Copy</button>
+                    </div>
+
+                    <div class="command-card">
+                        <h4>Command: git branch</h4>
+                        <pre><code>git branch -a</code></pre>
+                        <p>Lists your local branches and the remote ones. The current branch is marked with an asterisk.</p>
+                        <button type="button" class="copy-button" aria-label="Copy command git branch">Copy</button>
+                    </div>
+
+                    <div class="command-card">
+                        <h4>Command: git add and git commit</h4>
+                        <pre><code>git add .
+git commit -m "Add login form layout"</code></pre>
+                        <p>Stages your changes and saves them as a commit on your branch. Commit often, one idea at a time.</p>
+                        <button type="button" class="copy-button" aria-label="Copy command git add and commit">Copy</button>
+                    </div>
+
+                    <div class="command-card">
+                        <h4>Command: git push -u</h4>
+                        <pre><code>git push -u origin feature/login-form</code></pre>
+                        <p>Uploads your branch to GitHub. The <code>-u</code> flag links the two, so later you can type just <code>git push</code>.</p>
+                        <button type="button" class="copy-button" aria-label="Copy command git push upstream">Copy</button>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <section>
+                <header>
+                    <h2>Combining Work</h2>
+                    <h3>Merge, Rebase, and Stash</h3>
+                </header>
+
+                <p>While you work, <code>main</code> keeps moving. These commands bring those new changes into your branch, or set your own work aside for a moment.</p>
+
+                <div class="command-grid">
+                    <div class="command-card">
+                        <h4>Command: git merge</h4>
+                        <pre><code>git merge main</code></pre>
+                        <p>Adds the latest <code>main</code> into your branch with a merge commit. It keeps the exact history and is safe on shared branches.</p>
+                        <button type="button" class="copy-button" aria-label="Copy command git merge">Copy</button>
+                    </div>
+
+                    <div class="command-card">
+                        <h4>Command: git rebase</h4>
+                        <pre><code>git rebase main</code></pre>
+                        <p>Replays your commits on top of the latest <code>main</code> for a straight, clean history. Only rebase branches nobody else is working on.</p>
+                        <button type="button" class="copy-button" aria-label="Copy command git rebase">Copy</button>
+                    </div>
+
+                    <div class="command-card">
+                        <h4>Command: git stash</h4>
+                        <pre><code>git stash
+git stash pop</code></pre>
+                        <p>Saves unfinished changes aside so you can switch branches or pull, then brings them back with <code>pop</code>.</p>
+                        <button type="button" class="copy-button" aria-label="Copy command git stash">Copy</button>
+                    </div>
+
+                    <div class="command-card">
+                        <h4>Command: git log --graph</h4>
+                        <pre><code>git log --oneline --graph --all</code></pre>
+                        <p>Draws every branch and how they join. Useful for seeing what teammates merged.</p>
+                        <button type="button" class="copy-button" aria-label="Copy command git log graph">Copy</button>
+                    </div>
+                </div>
+
+                <aside><strong>Merge or rebase?</strong> When in doubt, use <code>merge</code>. It never rewrites history, so it cannot cause problems for teammates who already pulled your branch.</aside>
+            </section>
+
+            <hr>
+
+            <section>
+                <header>
+                    <h2>Pull Requests</h2>
+                    <h3>Asking the Team to Accept Your Changes</h3>
+                </header>
+
+                <p>A <i>pull request</i> (PR) is a page on GitHub that shows the differences between your branch and <code>main</code>, with space for discussion. It is how code gets reviewed before it is merged.</p>
+
+                <ol class="workflow-steps">
+                    <li>Push your branch, then open the repository on GitHub. Click <strong>Compare &amp; pull request</strong> on the yellow banner, or go to the <strong>Pull requests</strong> tab and choose <strong>New pull request</strong>.</li>
+                    <li>Write a short <strong>title</strong> that says what the change does, such as "Add login form to homepage".</li>
+                    <li>In the <strong>description</strong>, explain why the change is needed, what you changed, and how a reviewer can test it.</li>
+                    <li>Add <strong>reviewers</strong> from the sidebar, then click <strong>Create pull request</strong>.</li>
+                    <li>Read every review comment, reply to it, and push fixes to the same branch. The PR updates automatically.</li>
+                    <li>When it is approved, click <strong>Merge pull request</strong>.</li>
+                </ol>
+
+                <div class="command-card command-card-wide">
+                    <h4>Optional: open a PR from the terminal</h4>
+                    <pre><code>gh pr create --title "Add login form" --body "Adds the login form layout and validation."</code></pre>
+                    <p>The GitHub CLI (<code>gh</code>) opens a pull request for your current branch without leaving the terminal.</p>
+                    <button type="button" class="copy-button" aria-label="Copy command gh pr create">Copy</button>
+                </div>
+
+                <p>GitHub offers three ways to merge:</p>
+
+                <ul class="plain-list">
+                    <li><strong>Create a merge commit</strong> keeps every commit from the branch, plus one commit that joins it to <code>main</code>.</li>
+                    <li><strong>Squash and merge</strong> combines all the branch's commits into one tidy commit. It is a good default for small features.</li>
+                    <li><strong>Rebase and merge</strong> places each commit on top of <code>main</code> one by one, without a merge commit.</li>
+                </ul>
+            </section>
+
+            <hr>
+
+            <section>
+                <header>
+                    <h2>Merge Conflicts</h2>
+                    <h3>When Two People Change the Same Lines</h3>
+                </header>
+
+                <p>A <i>merge conflict</i> happens when two branches change the same lines of a file and Git cannot decide which version to keep. Git pauses and marks the conflicting part of the file for you:</p>
+
+                <div class="command-card command-card-wide conflict-example">
+                    <h4>What a conflict looks like</h4>
+                    <pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+&lt;h1&gt;Welcome to Our Site&lt;/h1&gt;
+=======
+&lt;h1&gt;Welcome to the Team Site&lt;/h1&gt;
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature/new-title</code></pre>
+                    <p>The part above <code>=======</code> is your version (<code>HEAD</code>). The part below is the version from the other branch.</p>
+                </div>
+
+                <ol class="workflow-steps">
+                    <li>Run <code>git status</code> to see which files have conflicts.</li>
+                    <li>Open each file and choose the correct text: yours, theirs, or a mix of both.</li>
+                    <li>Delete the <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> marker lines.</li>
+                    <li>Stage the fixed files and commit to finish the merge.</li>
+                </ol>
+
+                <div class="command-card command-card-wide">
+                    <h4>Command: finish resolving a conflict</h4>
+                    <pre><code>git add index.html
+git commit -m "Resolve title conflict"</code></pre>
+                    <p>Marks the conflict as resolved and completes the merge. To cancel instead, run <code>git merge --abort</code>.</p>
+                    <button type="button" class="copy-button" aria-label="Copy commands to resolve a conflict">Copy</button>
+                </div>
+            </section>
+
+            <hr>
+
+            <section>
+                <header>
+                    <h2>Team Best Practices</h2>
+                    <h3>Habits That Keep Everyone Moving</h3>
+                </header>
+
+                <ul class="plain-list">
+                    <li><strong>Pull before you start.</strong> Update <code>main</code> and branch from it, so you begin with your team's latest code.</li>
+                    <li><strong>Keep branches small and short-lived.</strong> A pull request with a few files is reviewed faster and conflicts less.</li>
+                    <li><strong>Write clear commit messages.</strong> "Fix broken link on about page" helps your team; "update" does not.</li>
+                    <li><strong>Name branches by purpose.</strong> Use prefixes such as <code>feature/</code>, <code>fix/</code>, and <code>docs/</code>, for example <code>fix/footer-spacing</code>.</li>
+                    <li><strong>Never force-push to main.</strong> <code>git push --force</code> can delete commits your teammates already rely on.</li>
+                    <li><strong>Review kindly and specifically.</strong> Comment on the code, not the person, and explain why you suggest a change.</li>
+                </ul>
+            </section>
+
+            <hr>
+
+            <section>
+                <header>
+                    <h2>Quick Reference</h2>
+                    <h3>Team Commands at a Glance</h3>
+                </header>
+
+                <div class="table-wrap">
+                    <table class="reference-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Command</th>
+                                <th scope="col">What it does</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><code>git clone &lt;url&gt;</code></td><td>Copies a repository to your computer</td></tr>
+                            <tr><td><code>git pull</code></td><td>Downloads and merges new commits</td></tr>
+                            <tr><td><code>git fetch</code></td><td>Downloads new commits without merging</td></tr>
+                            <tr><td><code>git switch -c &lt;name&gt;</code></td><td>Creates a branch and switches to it</td></tr>
+                            <tr><td><code>git branch -a</code></td><td>Lists local and remote branches</td></tr>
+                            <tr><td><code>git push -u origin &lt;name&gt;</code></td><td>Publishes a branch to GitHub</td></tr>
+                            <tr><td><code>git merge &lt;branch&gt;</code></td><td>Joins another branch into the current one</td></tr>
+                            <tr><td><code>git rebase &lt;branch&gt;</code></td><td>Replays your commits on top of another branch</td></tr>
+                            <tr><td><code>git stash</code> / <code>git stash pop</code></td><td>Sets work aside and brings it back</td></tr>
+                            <tr><td><code>git merge --abort</code></td><td>Cancels a merge that has conflicts</td></tr>
+                            <tr><td><code>gh pr create</code></td><td>Opens a pull request from the terminal</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <address>Web Development, 2026</address>
+    </footer>
+
+    <script>
+        const copyButtons = document.querySelectorAll(".copy-button");
+
+        function copyCommand(commandText) {
+            if (navigator.clipboard && window.isSecureContext) {
+                return navigator.clipboard.writeText(commandText);
+            }
+
+            const textArea = document.createElement("textarea");
+            textArea.value = commandText;
+            textArea.setAttribute("readonly", "");
+            textArea.style.position = "absolute";
+            textArea.style.left = "-9999px";
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textArea);
+            return Promise.resolve();
+        }
+
+        copyButtons.forEach((button) => {
+            button.addEventListener("click", async () => {
+                const commandCard = button.closest(".command-card");
+                const commandText = commandCard.querySelector("code").innerText;
+
+                try {
+                    await copyCommand(commandText);
+                    button.textContent = "Copied!";
+
+                    setTimeout(() => {
+                        button.textContent = "Copy";
+                    }, 1600);
+                } catch (error) {
+                    button.textContent = "Copy failed";
+
+                    setTimeout(() => {
+                        button.textContent = "Copy";
+                    }, 1600);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

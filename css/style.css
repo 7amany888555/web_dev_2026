@@ -444,6 +444,99 @@ pre {
     transform: translateY(-1px);
 }
 
+nav a[aria-current="page"] {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(235, 247, 250, 0.95));
+    box-shadow: 0 10px 24px rgba(47, 126, 163, 0.16);
+    color: var(--blue-deep);
+}
+
+.plain-list {
+    color: var(--muted);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.workflow-steps {
+    counter-reset: step;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.workflow-steps li {
+    color: var(--muted);
+    counter-increment: step;
+    padding-left: 2.9rem;
+    position: relative;
+}
+
+.workflow-steps li::before {
+    align-items: center;
+    background: linear-gradient(135deg, var(--blue), #516dae);
+    border-radius: 50%;
+    color: #ffffff;
+    content: counter(step);
+    display: flex;
+    font-size: 0.9rem;
+    font-weight: 800;
+    height: 2rem;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 2rem;
+}
+
+.workflow-steps li:not(:last-child)::after {
+    background: linear-gradient(180deg, rgba(47, 126, 163, 0.4), rgba(120, 198, 189, 0.2));
+    bottom: -0.75rem;
+    content: "";
+    left: calc(1rem - 1px);
+    position: absolute;
+    top: 2rem;
+    width: 2px;
+}
+
+.conflict-example pre {
+    border-left-color: var(--peach);
+}
+
+.table-wrap {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.reference-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.reference-table th,
+.reference-table td {
+    border-bottom: 1px solid rgba(126, 154, 178, 0.24);
+    padding: 0.65rem 0.8rem;
+    text-align: left;
+    vertical-align: top;
+}
+
+.reference-table th {
+    color: var(--blue-deep);
+}
+
+.reference-table td {
+    color: var(--muted);
+}
+
+.reference-table td:first-child {
+    white-space: nowrap;
+}
+
 img {
     display: block;
     height: auto;
